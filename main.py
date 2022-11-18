@@ -12,11 +12,7 @@ class MainWindow(QMainWindow):
 
     def __init__(self, parent=None):
         super().__init__(parent)
-
-        self.resize(646, 495)
-        self.button_1 = QPushButton(self)
-        self.button_1.setGeometry(QRect(280, 200, 75, 23))
-        self.button_1.setText("Кнопка")
+        uic.loadUi("UI.ui")
         self.button_1.pressed.connect(self.draw)
 
     def draw(self):
