@@ -28,8 +28,8 @@ class MainWindow(QMainWindow):
             return
         qp = QPainter()
         qp.begin(self)
+        qp.setBrush(QColor(255, 255, 0))
         for _ in range(3):
-            qp.setBrush(QColor(*(random.randint(0, 255) for _ in range(3))))
             x = random.randint(0, self.width())
             y = random.randint(0, self.height())
             s = random.randint(0, 50)
